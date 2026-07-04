@@ -54,10 +54,9 @@
 
     <!-- HERO -->
     <section class="relative overflow-hidden">
-      <div class="absolute -top-32 right-1/2 translate-x-1/2 md:right-0 md:translate-x-0 w-[520px] h-[520px] rounded-full bg-accent/20 blur-3xl pointer-events-none"></div>
       <div class="max-w-6xl mx-auto px-5 pt-20 pb-24 relative">
         <p class="text-accent font-bold tracking-wide text-sm mb-4 reveal">상세페이지 디자인 전문 · 9년 차</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.15] max-w-3xl reveal">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl leading-[3.45] max-w-3xl reveal">
           기획도, 디자인도<br />
           <span class="dot-accent">윤페이지</span> 하나면 충분합니다<span class="dot-accent">.</span>
         </h1>
@@ -223,7 +222,7 @@
       a.href = "./portfolio.html";
       a.className = "thumb aspect-[4/5]";
       a.innerHTML = `
-        <img src="./brand_logo/portfolio/${cat}/${encodeURIComponent(item.file)}" alt="${item.title}" class="w-full h-full object-cover object-top" loading="lazy" />
+        <img src="./${item.thumb}" alt="${item.title}" class="w-full h-full object-cover object-top" loading="lazy" />
         <div class="thumb-overlay"><span class="text-xs font-bold">${cat}</span></div>
       `;
       grid.appendChild(a);

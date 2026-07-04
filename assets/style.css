@@ -21,6 +21,14 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* multi-line text: ~3x default line-height for extra breathing room */
+.leading-snug {
+  line-height: 4.1 !important;
+}
+.leading-relaxed {
+  line-height: 4.8 !important;
+}
+
 /* buttons */
 .btn-primary,
 .btn-secondary {
@@ -132,7 +140,7 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 0.9rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  background: rgba(0, 0, 0, 0.78);
   opacity: 0;
   transition: opacity 200ms ease-out;
 }

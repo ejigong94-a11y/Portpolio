@@ -133,7 +133,7 @@
         const div = document.createElement("div");
         div.className = "thumb aspect-[4/5]";
         div.innerHTML = `
-          <img src="./brand_logo/portfolio/${item.cat}/${encodeURIComponent(item.file)}" alt="${item.title}" class="w-full h-full object-cover object-top" loading="lazy" />
+          <img src="./${item.thumb}" alt="${item.title}" class="w-full h-full object-cover object-top" loading="lazy" />
           <div class="thumb-overlay">
             <div>
               <p class="text-xs text-accent font-bold mb-0.5">${item.cat}</p>
@@ -159,7 +159,7 @@
     }
     function showCurrent() {
       const item = currentList[currentIndex];
-      lbImg.src = `./brand_logo/portfolio/${item.cat}/${encodeURIComponent(item.file)}`;
+      lbImg.src = `./${item.full}`;
       lbImg.alt = item.title;
       lbCaption.textContent = `${item.cat} · ${item.title}`;
     }

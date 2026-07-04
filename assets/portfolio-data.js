@@ -1,283 +1,351 @@
 const PORTFOLIO_DATA = {
   "강의": [
     {
-      "file": "03ab61cde34fe.png",
+      "thumb": "assets/thumbs/강의/01.webp",
+      "full": "assets/full/강의/01.webp",
       "title": "강의 상세페이지 디자인 1"
     },
     {
-      "file": "47e2f03386a98.png",
+      "thumb": "assets/thumbs/강의/02.webp",
+      "full": "assets/full/강의/02.webp",
       "title": "강의 상세페이지 디자인 2"
     },
     {
-      "file": "9b37093ab4537.png",
+      "thumb": "assets/thumbs/강의/03.webp",
+      "full": "assets/full/강의/03.webp",
       "title": "강의 상세페이지 디자인 3"
     },
     {
-      "file": "aa55b58a5dcbd.jpg",
+      "thumb": "assets/thumbs/강의/04.webp",
+      "full": "assets/full/강의/04.webp",
       "title": "강의 상세페이지 디자인 4"
     },
     {
-      "file": "ee2413de0201a.jpg",
+      "thumb": "assets/thumbs/강의/05.webp",
+      "full": "assets/full/강의/05.webp",
       "title": "강의 상세페이지 디자인 5"
     }
   ],
   "기타": [
     {
-      "file": "22322903f29ba.jpg",
+      "thumb": "assets/thumbs/기타/01.webp",
+      "full": "assets/full/기타/01.webp",
       "title": "기타 상세페이지 디자인 1"
     },
     {
-      "file": "254217b241948.png",
+      "thumb": "assets/thumbs/기타/02.webp",
+      "full": "assets/full/기타/02.webp",
       "title": "기타 상세페이지 디자인 2"
     },
     {
-      "file": "32899c07acf95.png",
+      "thumb": "assets/thumbs/기타/03.webp",
+      "full": "assets/full/기타/03.webp",
       "title": "기타 상세페이지 디자인 3"
     },
     {
-      "file": "81f31958f1cbd.png",
+      "thumb": "assets/thumbs/기타/04.webp",
+      "full": "assets/full/기타/04.webp",
       "title": "기타 상세페이지 디자인 4"
     },
     {
-      "file": "8af58635a1fdf.jpg",
+      "thumb": "assets/thumbs/기타/05.webp",
+      "full": "assets/full/기타/05.webp",
       "title": "기타 상세페이지 디자인 5"
     },
     {
-      "file": "a3194d1d75fa2.png",
+      "thumb": "assets/thumbs/기타/06.webp",
+      "full": "assets/full/기타/06.webp",
       "title": "기타 상세페이지 디자인 6"
     },
     {
-      "file": "b20a5406ee688.jpg",
+      "thumb": "assets/thumbs/기타/07.webp",
+      "full": "assets/full/기타/07.webp",
       "title": "기타 상세페이지 디자인 7"
     },
     {
-      "file": "ef8d0e76547a0.jpg",
+      "thumb": "assets/thumbs/기타/08.webp",
+      "full": "assets/full/기타/08.webp",
       "title": "기타 상세페이지 디자인 8"
     },
     {
-      "file": "솜솜펫 강아지 고양이 쿨매트 반려동물.png",
+      "thumb": "assets/thumbs/기타/09.webp",
+      "full": "assets/full/기타/09.webp",
       "title": "솜솜펫 강아지 고양이 쿨매트 반려동물"
     },
     {
-      "file": "에코마음 무선 휴대용 에어펌프 조명 2in1.png",
+      "thumb": "assets/thumbs/기타/10.webp",
+      "full": "assets/full/기타/10.webp",
       "title": "에코마음 무선 휴대용 에어펌프 조명 2in1"
     },
     {
-      "file": "엑스볼트 낙엽 무선 송풍기 충전식 배터리 2개.png",
+      "thumb": "assets/thumbs/기타/11.webp",
+      "full": "assets/full/기타/11.webp",
       "title": "엑스볼트 낙엽 무선 송풍기 충전식 배터리 2개"
     },
     {
-      "file": "엑스볼트 스티로폼 열선 커터기 폼보드 스티로폼 절단기.png",
+      "thumb": "assets/thumbs/기타/12.webp",
+      "full": "assets/full/기타/12.webp",
       "title": "엑스볼트 스티로폼 열선 커터기 폼보드 스티로폼 절단기"
     },
     {
-      "file": "엑스볼트 휴대용 전동 농약 압축분무기 5L.png",
+      "thumb": "assets/thumbs/기타/13.webp",
+      "full": "assets/full/기타/13.webp",
       "title": "엑스볼트 휴대용 전동 농약 압축분무기 5L"
     },
     {
-      "file": "케리빙 어항 7단계 물고기 자동급여기.png",
+      "thumb": "assets/thumbs/기타/14.webp",
+      "full": "assets/full/기타/14.webp",
       "title": "케리빙 어항 7단계 물고기 자동급여기"
     }
   ],
   "뷰티": [
     {
-      "file": "1ce321288b7a3.jpg",
+      "thumb": "assets/thumbs/뷰티/01.webp",
+      "full": "assets/full/뷰티/01.webp",
       "title": "뷰티 상세페이지 디자인 1"
     },
     {
-      "file": "236fe13020415.png",
+      "thumb": "assets/thumbs/뷰티/02.webp",
+      "full": "assets/full/뷰티/02.webp",
       "title": "뷰티 상세페이지 디자인 2"
     },
     {
-      "file": "수정2시크에스 두피보호제.png",
+      "thumb": "assets/thumbs/뷰티/03.webp",
+      "full": "assets/full/뷰티/03.webp",
       "title": "수정2시크에스 두피보호제"
     },
     {
-      "file": "심리스 쿨링 오프숄더 브라.png",
+      "thumb": "assets/thumbs/뷰티/04.webp",
+      "full": "assets/full/뷰티/04.webp",
       "title": "심리스 쿨링 오프숄더 브라"
     },
     {
-      "file": "에코마음 남자 전기면도기 생활방수 남성 전동 면도기.png",
+      "thumb": "assets/thumbs/뷰티/05.webp",
+      "full": "assets/full/뷰티/05.webp",
       "title": "에코마음 남자 전기면도기 생활방수 남성 전동 면도기"
     },
     {
-      "file": "에코마음 무선 네일드릴 젤네일 제거 6종 드릴.png",
+      "thumb": "assets/thumbs/뷰티/06.webp",
+      "full": "assets/full/뷰티/06.webp",
       "title": "에코마음 무선 네일드릴 젤네일 제거 6종 드릴"
     },
     {
-      "file": "에코마음 온열 앞머리 볼륨 집게 앞머리 헤어롤.png",
+      "thumb": "assets/thumbs/뷰티/07.webp",
+      "full": "assets/full/뷰티/07.webp",
       "title": "에코마음 온열 앞머리 볼륨 집게 앞머리 헤어롤"
     },
     {
-      "file": "에코마음 쿨링 온열 무선 전동클렌저 브러쉬.png",
+      "thumb": "assets/thumbs/뷰티/08.webp",
+      "full": "assets/full/뷰티/08.webp",
       "title": "에코마음 쿨링 온열 무선 전동클렌저 브러쉬"
     },
     {
-      "file": "파라다이스그레인.png",
+      "thumb": "assets/thumbs/뷰티/09.webp",
+      "full": "assets/full/뷰티/09.webp",
       "title": "파라다이스그레인"
     }
   ],
   "생활용품": [
     {
-      "file": "06a4423ae0327.jpg",
+      "thumb": "assets/thumbs/생활용품/01.webp",
+      "full": "assets/full/생활용품/01.webp",
       "title": "생활용품 상세페이지 디자인 1"
     },
     {
-      "file": "0a19b5f8c83f2.jpg",
+      "thumb": "assets/thumbs/생활용품/02.webp",
+      "full": "assets/full/생활용품/02.webp",
       "title": "생활용품 상세페이지 디자인 2"
     },
     {
-      "file": "10b4492fb718d.png",
+      "thumb": "assets/thumbs/생활용품/03.webp",
+      "full": "assets/full/생활용품/03.webp",
       "title": "생활용품 상세페이지 디자인 3"
     },
     {
-      "file": "1153ebc2b2797.png",
+      "thumb": "assets/thumbs/생활용품/04.webp",
+      "full": "assets/full/생활용품/04.webp",
       "title": "생활용품 상세페이지 디자인 4"
     },
     {
-      "file": "1309ffcc18379.jpg",
+      "thumb": "assets/thumbs/생활용품/05.webp",
+      "full": "assets/full/생활용품/05.webp",
       "title": "생활용품 상세페이지 디자인 5"
     },
     {
-      "file": "1456793941d6d.jpg",
+      "thumb": "assets/thumbs/생활용품/06.webp",
+      "full": "assets/full/생활용품/06.webp",
       "title": "생활용품 상세페이지 디자인 6"
     },
     {
-      "file": "14ae4b705768c.jpg",
+      "thumb": "assets/thumbs/생활용품/07.webp",
+      "full": "assets/full/생활용품/07.webp",
       "title": "생활용품 상세페이지 디자인 7"
     },
     {
-      "file": "231d826022364.jpg",
+      "thumb": "assets/thumbs/생활용품/08.webp",
+      "full": "assets/full/생활용품/08.webp",
       "title": "생활용품 상세페이지 디자인 8"
     },
     {
-      "file": "2c95da5b93d11.jpg",
+      "thumb": "assets/thumbs/생활용품/09.webp",
+      "full": "assets/full/생활용품/09.webp",
       "title": "생활용품 상세페이지 디자인 9"
     },
     {
-      "file": "3e1c956e4db23.jpg",
+      "thumb": "assets/thumbs/생활용품/10.webp",
+      "full": "assets/full/생활용품/10.webp",
       "title": "생활용품 상세페이지 디자인 10"
     },
     {
-      "file": "466c3c82fba2b.png",
+      "thumb": "assets/thumbs/생활용품/11.webp",
+      "full": "assets/full/생활용품/11.webp",
       "title": "생활용품 상세페이지 디자인 11"
     },
     {
-      "file": "70cb46b1b2c71.jpg",
+      "thumb": "assets/thumbs/생활용품/12.webp",
+      "full": "assets/full/생활용품/12.webp",
       "title": "생활용품 상세페이지 디자인 12"
     },
     {
-      "file": "87ee8d5815825.jpg",
+      "thumb": "assets/thumbs/생활용품/13.webp",
+      "full": "assets/full/생활용품/13.webp",
       "title": "생활용품 상세페이지 디자인 13"
     },
     {
-      "file": "890a4702279ba.jpg",
+      "thumb": "assets/thumbs/생활용품/14.webp",
+      "full": "assets/full/생활용품/14.webp",
       "title": "생활용품 상세페이지 디자인 14"
     },
     {
-      "file": "928ddd5574674.jpg",
+      "thumb": "assets/thumbs/생활용품/15.webp",
+      "full": "assets/full/생활용품/15.webp",
       "title": "생활용품 상세페이지 디자인 15"
     },
     {
-      "file": "AK몰 인테리어 안깨지는 아크릴 투명 꽃병 화병.png",
+      "thumb": "assets/thumbs/생활용품/16.webp",
+      "full": "assets/full/생활용품/16.webp",
       "title": "AK몰 인테리어 안깨지는 아크릴 투명 꽃병 화병"
     },
     {
-      "file": "a454036d23478.jpg",
+      "thumb": "assets/thumbs/생활용품/17.webp",
+      "full": "assets/full/생활용품/17.webp",
       "title": "생활용품 상세페이지 디자인 17"
     },
     {
-      "file": "aa8a85ff79439.jpg",
+      "thumb": "assets/thumbs/생활용품/18.webp",
+      "full": "assets/full/생활용품/18.webp",
       "title": "생활용품 상세페이지 디자인 18"
     },
     {
-      "file": "baacdca1aeb1c.png",
+      "thumb": "assets/thumbs/생활용품/19.webp",
+      "full": "assets/full/생활용품/19.webp",
       "title": "생활용품 상세페이지 디자인 19"
     },
     {
-      "file": "c4e090c04d83b.jpg",
+      "thumb": "assets/thumbs/생활용품/20.webp",
+      "full": "assets/full/생활용품/20.webp",
       "title": "생활용품 상세페이지 디자인 20"
     },
     {
-      "file": "c6b262a7d4cc5.jpg",
+      "thumb": "assets/thumbs/생활용품/21.webp",
+      "full": "assets/full/생활용품/21.webp",
       "title": "생활용품 상세페이지 디자인 21"
     },
     {
-      "file": "cc0116dd3d3f7.jpg",
+      "thumb": "assets/thumbs/생활용품/22.webp",
+      "full": "assets/full/생활용품/22.webp",
       "title": "생활용품 상세페이지 디자인 22"
     },
     {
-      "file": "d72aa2051f5ea.jpg",
+      "thumb": "assets/thumbs/생활용품/23.webp",
+      "full": "assets/full/생활용품/23.webp",
       "title": "생활용품 상세페이지 디자인 23"
     },
     {
-      "file": "e332bbaa78a42.jpg",
+      "thumb": "assets/thumbs/생활용품/24.webp",
+      "full": "assets/full/생활용품/24.webp",
       "title": "생활용품 상세페이지 디자인 24"
     },
     {
-      "file": "f0f041f6b7c78.png",
+      "thumb": "assets/thumbs/생활용품/25.webp",
+      "full": "assets/full/생활용품/25.webp",
       "title": "생활용품 상세페이지 디자인 25"
     },
     {
-      "file": "fbe06b9deb3a3.jpg",
+      "thumb": "assets/thumbs/생활용품/26.webp",
+      "full": "assets/full/생활용품/26.webp",
       "title": "생활용품 상세페이지 디자인 26"
     },
     {
-      "file": "fc889fb3529fd.png",
+      "thumb": "assets/thumbs/생활용품/27.webp",
+      "full": "assets/full/생활용품/27.webp",
       "title": "생활용품 상세페이지 디자인 27"
     },
     {
-      "file": "fcbe472cdf2cd.png",
+      "thumb": "assets/thumbs/생활용품/28.webp",
+      "full": "assets/full/생활용품/28.webp",
       "title": "생활용품 상세페이지 디자인 28"
     },
     {
-      "file": "와우네이처 5단 이동식 수납 트롤리.png",
+      "thumb": "assets/thumbs/생활용품/29.webp",
+      "full": "assets/full/생활용품/29.webp",
       "title": "와우네이처 5단 이동식 수납 트롤리"
     },
     {
-      "file": "원목 긴나무 구두주걱.png",
+      "thumb": "assets/thumbs/생활용품/30.webp",
+      "full": "assets/full/생활용품/30.webp",
       "title": "원목 긴나무 구두주걱"
     },
     {
-      "file": "픽스더바디_손목보호대.png",
+      "thumb": "assets/thumbs/생활용품/31.webp",
+      "full": "assets/full/생활용품/31.webp",
       "title": "픽스더바디 손목보호대"
     }
   ],
   "식품": [
     {
-      "file": "01ef84d9abaec.jpg",
+      "thumb": "assets/thumbs/식품/01.webp",
+      "full": "assets/full/식품/01.webp",
       "title": "식품 상세페이지 디자인 1"
     },
     {
-      "file": "2db9ed1bc0e65.jpg",
+      "thumb": "assets/thumbs/식품/02.webp",
+      "full": "assets/full/식품/02.webp",
       "title": "식품 상세페이지 디자인 2"
     },
     {
-      "file": "7e9d7ea43a7b0.jpg",
+      "thumb": "assets/thumbs/식품/03.webp",
+      "full": "assets/full/식품/03.webp",
       "title": "식품 상세페이지 디자인 3"
     },
     {
-      "file": "ca9a2cce2e7b2.jpg",
+      "thumb": "assets/thumbs/식품/04.webp",
+      "full": "assets/full/식품/04.webp",
       "title": "식품 상세페이지 디자인 4"
     },
     {
-      "file": "d67573206444c.png",
+      "thumb": "assets/thumbs/식품/05.webp",
+      "full": "assets/full/식품/05.webp",
       "title": "식품 상세페이지 디자인 5"
     },
     {
-      "file": "e199046c3342f.jpg",
+      "thumb": "assets/thumbs/식품/06.webp",
+      "full": "assets/full/식품/06.webp",
       "title": "식품 상세페이지 디자인 6"
     },
     {
-      "file": "e25b9736de481.png",
+      "thumb": "assets/thumbs/식품/07.webp",
+      "full": "assets/full/식품/07.webp",
       "title": "식품 상세페이지 디자인 7"
     },
     {
-      "file": "f72b4d8db1ada.png",
+      "thumb": "assets/thumbs/식품/08.webp",
+      "full": "assets/full/식품/08.webp",
       "title": "식품 상세페이지 디자인 8"
     },
     {
-      "file": "fad8f976baef4.png",
+      "thumb": "assets/thumbs/식품/09.webp",
+      "full": "assets/full/식품/09.webp",
       "title": "식품 상세페이지 디자인 9"
     }
   ]

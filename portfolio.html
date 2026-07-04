@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>포트폴리오 | YUNPAGE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: "#0a0a0b",
+          surface: "#141416",
+          surface2: "#1c1c1f",
+          muted: "#9a9a9f",
+          accent: "#f0127e",
+          accentdark: "#c40f68",
+        },
+        fontFamily: {
+          display: ['"Black Han Sans"', "Noto Sans KR", "sans-serif"],
+          sans: ['"Noto Sans KR"', "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body class="bg-bg text-white">
+
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-1">
+        <img src="./brand_logo/logo.png" alt="YUNPAGE" class="h-6" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="./index.html" class="nav-link">홈</a>
+        <a href="./portfolio.html" class="nav-link active">포트폴리오</a>
+        <a href="./about.html" class="nav-link">소개</a>
+      </nav>
+      <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="btn-primary text-sm px-5 py-2.5">
+        카톡 문의하기
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section class="max-w-6xl mx-auto px-5 pt-16 pb-8">
+      <p class="text-accent font-bold text-sm mb-3">Portfolio</p>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl leading-snug">
+        작업물로 <span class="dot-accent">증명</span>합니다
+      </h1>
+      <p class="mt-4 text-muted max-w-xl">카테고리별로 진행한 상세페이지 작업물입니다. 이미지를 클릭하면 크게 볼 수 있어요.</p>
+
+      <div id="chip-row" class="mt-10 flex flex-wrap gap-3"></div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-5 pb-24">
+      <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <section class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-5 py-20 text-center">
+        <h2 class="font-display text-2xl sm:text-3xl leading-snug">마음에 드는 스타일 찾으셨나요<span class="dot-accent">?</span></h2>
+        <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="btn-primary mt-8 px-8 py-3.5 inline-flex">카카오톡으로 문의하기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <img src="./brand_logo/logo.png" alt="YUNPAGE" class="h-5 opacity-80" />
+      <p class="text-muted text-xs">Copyright ⓒ YUNPAGE. All rights reserved.</p>
+      <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="text-xs text-accent font-bold hover:underline">카톡 문의</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lb-close" aria-label="닫기" class="absolute top-5 right-5 text-white/80 hover:text-accent text-3xl leading-none">&times;</button>
+    <button id="lb-prev" aria-label="이전" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent text-4xl leading-none">&#8249;</button>
+    <button id="lb-next" aria-label="다음" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent text-4xl leading-none">&#8250;</button>
+    <figure class="flex flex-col items-center gap-4 max-w-4xl">
+      <div class="lb-scroll">
+        <img id="lb-img" src="" alt="" />
+      </div>
+      <figcaption id="lb-caption" class="text-sm text-muted"></figcaption>
+    </figure>
+  </div>
+
+  <script src="./assets/portfolio-data.js"></script>
+  <script>
+    const CATS = ["전체", "생활용품", "뷰티", "식품", "강의", "기타"];
+    const chipRow = document.getElementById("chip-row");
+    const grid = document.getElementById("grid");
+
+    // flat list with category tag, in a fixed display order
+    const ORDER = ["생활용품", "뷰티", "식품", "강의", "기타"];
+    const ALL_ITEMS = ORDER.flatMap((cat) =>
+      PORTFOLIO_DATA[cat].map((item) => ({ ...item, cat }))
+    );
+
+    function countFor(cat) {
+      return cat === "전체" ? ALL_ITEMS.length : PORTFOLIO_DATA[cat].length;
+    }
+
+    CATS.forEach((cat) => {
+      const btn = document.createElement("button");
+      btn.className = "chip px-4 py-2 rounded-full text-sm font-bold" + (cat === "전체" ? " active" : "");
+      btn.dataset.cat = cat;
+      btn.textContent = `${cat} (${countFor(cat)})`;
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+        btn.classList.add("active");
+        render(cat);
+      });
+      chipRow.appendChild(btn);
+    });
+
+    let currentList = ALL_ITEMS;
+    let currentIndex = 0;
+
+    function render(cat) {
+      const items = cat === "전체" ? ALL_ITEMS : ALL_ITEMS.filter((i) => i.cat === cat);
+      currentList = items;
+      grid.innerHTML = "";
+      items.forEach((item, i) => {
+        const div = document.createElement("div");
+        div.className = "thumb aspect-[4/5]";
+        div.innerHTML = `
+          <img src="./brand_logo/portfolio/${item.cat}/${encodeURIComponent(item.file)}" alt="${item.title}" class="w-full h-full object-cover object-top" loading="lazy" />
+          <div class="thumb-overlay">
+            <div>
+              <p class="text-xs text-accent font-bold mb-0.5">${item.cat}</p>
+              <p class="text-xs font-bold">${item.title}</p>
+            </div>
+          </div>
+        `;
+        div.addEventListener("click", () => openLightbox(i));
+        grid.appendChild(div);
+      });
+    }
+
+    render("전체");
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lb-img");
+    const lbCaption = document.getElementById("lb-caption");
+
+    function openLightbox(i) {
+      currentIndex = i;
+      showCurrent();
+      lb.classList.add("open");
+    }
+    function showCurrent() {
+      const item = currentList[currentIndex];
+      lbImg.src = `./brand_logo/portfolio/${item.cat}/${encodeURIComponent(item.file)}`;
+      lbImg.alt = item.title;
+      lbCaption.textContent = `${item.cat} · ${item.title}`;
+    }
+    function closeLightbox() {
+      lb.classList.remove("open");
+    }
+    document.getElementById("lb-close").addEventListener("click", closeLightbox);
+    document.getElementById("lb-prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + currentList.length) % currentList.length;
+      showCurrent();
+    });
+    document.getElementById("lb-next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % currentList.length;
+      showCurrent();
+    });
+    lb.addEventListener("click", (e) => {
+      if (e.target === lb) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") document.getElementById("lb-prev").click();
+      if (e.key === "ArrowRight") document.getElementById("lb-next").click();
+    });
+  </script>
+</body>
+</html>

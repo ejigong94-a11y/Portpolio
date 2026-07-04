@@ -1,0 +1,197 @@
+:root {
+  --bg: #0a0a0b;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
+  --text: #f5f5f4;
+  --muted: #9a9a9f;
+  --accent: #f0127e;
+  --accent-dark: #c40f68;
+  --accent-soft: rgba(240, 18, 126, 0.14);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.font-display {
+  font-family: "Black Han Sans", "Noto Sans KR", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition-property: transform, opacity, background-color, border-color, box-shadow;
+  transition-duration: 160ms;
+  transition-timing-function: ease-out;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 12px 32px -12px rgba(240, 18, 126, 0.65);
+}
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: scale(1.02);
+}
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: scale(1.02);
+}
+.btn-secondary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+}
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* layered brand shadow for cards */
+.card-shadow {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 20px 40px -24px rgba(240, 18, 126, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.6);
+}
+
+.dot-accent {
+  color: var(--accent);
+}
+
+/* nav underline */
+.nav-link {
+  position: relative;
+  color: var(--muted);
+  transition: color 160ms ease-out;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  transition: width 160ms ease-out;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* portfolio thumb */
+.thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--surface);
+  cursor: pointer;
+}
+.thumb img {
+  transition: transform 240ms ease-out, opacity 240ms ease-out;
+}
+.thumb:hover img {
+  transform: scale(1.04);
+}
+.thumb .thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.9rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+.thumb:hover .thumb-overlay {
+  opacity: 1;
+}
+
+/* filter chip */
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--muted);
+  transition: transform 160ms ease-out, opacity 160ms ease-out, background-color 160ms ease-out, color 160ms ease-out, border-color 160ms ease-out;
+}
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+#lightbox.open {
+  display: flex;
+}
+#lightbox .lb-scroll {
+  max-height: 86vh;
+  max-width: min(92vw, 640px);
+  overflow-y: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8);
+}
+#lightbox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: fade-up 480ms ease-out both;
+}

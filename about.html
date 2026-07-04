@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>소개 | YUNPAGE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: "#0a0a0b",
+          surface: "#141416",
+          surface2: "#1c1c1f",
+          muted: "#9a9a9f",
+          accent: "#f0127e",
+          accentdark: "#c40f68",
+        },
+        fontFamily: {
+          display: ['"Black Han Sans"', "Noto Sans KR", "sans-serif"],
+          sans: ['"Noto Sans KR"', "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body class="bg-bg text-white">
+
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-1">
+        <img src="./brand_logo/logo.png" alt="YUNPAGE" class="h-6" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="./index.html" class="nav-link">홈</a>
+        <a href="./portfolio.html" class="nav-link">포트폴리오</a>
+        <a href="./about.html" class="nav-link active">소개</a>
+      </nav>
+      <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="btn-primary text-sm px-5 py-2.5">
+        카톡 문의하기
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- INTRO -->
+    <section class="max-w-6xl mx-auto px-5 pt-20 pb-16 grid md:grid-cols-[auto_1fr] gap-12 items-center">
+      <img src="./brand_logo/ChatGPT Image 2025년 6월 30일 오후 07_37_06.png" alt="윤페이지 프로필" class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl object-cover mx-auto md:mx-0 ring-2 ring-accent/30 card-shadow" />
+      <div>
+        <p class="text-accent font-bold text-sm mb-3">About</p>
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl leading-snug">
+          상세페이지 디자인 전문<br /><span class="dot-accent">윤페이지</span>입니다
+        </h1>
+        <p class="mt-5 text-muted leading-relaxed max-w-xl">
+          9년 차 웹디자이너로 생활용품, 식품, 뷰티, 강의 등 다양한 분야의 상세페이지를 만들어왔습니다.
+          클라이언트의 브랜드를 감각적으로, 설득력 있게 담아내는 것이 제 일입니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="border-t border-white/10 bg-surface">
+      <div class="max-w-6xl mx-auto px-5 py-16 grid grid-cols-3 gap-6 text-center">
+        <div>
+          <p class="font-display text-3xl sm:text-4xl">9년<span class="dot-accent">차</span></p>
+          <p class="text-muted text-xs sm:text-sm mt-2">웹디자이너 경력</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl sm:text-4xl">90<span class="dot-accent">%</span></p>
+          <p class="text-muted text-xs sm:text-sm mt-2">클라이언트 재계약률</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl sm:text-4xl">68<span class="dot-accent">+</span></p>
+          <p class="text-muted text-xs sm:text-sm mt-2">누적 작업물</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-5 py-20">
+        <h2 class="font-display text-2xl sm:text-3xl leading-snug mb-12">일하는 <span class="dot-accent">방식</span></h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card-shadow bg-surface2 rounded-2xl p-8">
+            <p class="font-display text-accent text-3xl mb-4">01</p>
+            <p class="font-bold text-lg mb-3">'팔리는' 구조 설계</p>
+            <p class="text-muted text-sm leading-relaxed">단순한 예쁨이 아닌, 목적에 맞는 전환 구조로 상세페이지를 설계합니다.</p>
+          </div>
+          <div class="card-shadow bg-surface2 rounded-2xl p-8">
+            <p class="font-display text-accent text-3xl mb-4">02</p>
+            <p class="font-bold text-lg mb-3">편하고 빠른 소통</p>
+            <p class="text-muted text-sm leading-relaxed">명확한 커뮤니케이션으로 수정 없이 한 번에 끝나는 결과를 지향합니다.</p>
+          </div>
+          <div class="card-shadow bg-surface2 rounded-2xl p-8">
+            <p class="font-display text-accent text-3xl mb-4">03</p>
+            <p class="font-bold text-lg mb-3">감성 · 실용 · 세일즈</p>
+            <p class="text-muted text-sm leading-relaxed">감성적인 톤과 실용적인 정보, 세일즈 카피까지 하나로 연결합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-t border-white/10 bg-surface">
+      <div class="max-w-6xl mx-auto px-5 py-20 text-center">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl leading-snug">함께 만들어볼까요<span class="dot-accent">?</span></h2>
+        <p class="mt-4 text-muted">부담 없이 카톡으로 물어보세요.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="btn-primary px-8 py-3.5">카카오톡으로 문의하기</a>
+          <a href="./portfolio.html" class="btn-secondary px-8 py-3.5">작업물 보러가기</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <img src="./brand_logo/logo.png" alt="YUNPAGE" class="h-5 opacity-80" />
+      <p class="text-muted text-xs">Copyright ⓒ YUNPAGE. All rights reserved.</p>
+      <a href="https://open.kakao.com/me/yunpage" target="_blank" rel="noopener" class="text-xs text-accent font-bold hover:underline">카톡 문의</a>
+    </div>
+  </footer>
+</body>
+</html>

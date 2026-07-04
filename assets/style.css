@@ -83,12 +83,20 @@ body {
   transform: scale(0.98);
 }
 
-/* layered brand shadow for cards */
+/* card shadow + hover lift highlight */
 .card-shadow {
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 20px 40px -24px rgba(240, 18, 126, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.6);
+  border: 1px solid transparent;
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out, border-color 180ms ease-out;
+}
+.card-shadow:hover {
+  transform: translateY(-6px);
+  border-color: rgba(240, 18, 126, 0.5);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 16px 32px -12px rgba(0, 0, 0, 0.7);
 }
 
 .dot-accent {
